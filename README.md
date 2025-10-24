@@ -117,11 +117,11 @@ To build docs locally:
 
 ```bash
 dbt docs generate
-dbt docs serve
+dbt docs serve --port 8080
 ```
 
-GitHub Pages live docs:
-🔗 [*(deployment steps below)*](https://mosamir70.github.io/Sales_Analytics/#!/overview)
+Public docs:
+🔗 [*(GitHub Pages Deployment)*](https://mosamir70.github.io/Sales_Analytics/#!/overview)
 
 ---
 
