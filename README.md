@@ -82,7 +82,7 @@ gcloud auth application-default login
 If U have this error:
 
 'gcloud' is not recognized as the name of a cmdlet or operable program.
-🔗 [*(Download SDK From Here)*](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
+🔗 [*(Download SDK)*](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
 
 hint during Auth U must check right in all checkboxes
 
