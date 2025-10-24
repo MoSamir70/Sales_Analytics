@@ -21,11 +21,11 @@ Step-by-Step Guide to End to end data engineering project (dbt + BigQuery, Githu
 
 
 
-#### 🔧 Setup Instructions
+## 🔧 Setup Instructions
 
 
 
-## Create Virtual Environment
+### Create Virtual Environment
 
 ```bash
 python -m venv dbt-env
@@ -33,13 +33,15 @@ dbt-env\Scripts\activate   # Windows
 ```
 
 
-## Create a BigQuery Dataset
+### Create a BigQuery Dataset
 
 ```bash
-Google Big query Consol: https://console.cloud.google.com/bigquery?project=temporal-parser-476019-m6&ws=!1m0
+
+🔗 [*(Google Big query Consol:)*](https://console.cloud.google.com/bigquery?project=temporal-parser-476019-m6&ws=!1m0)
+
 ```
 
-##  Initialize a dbt Project
+###  Initialize a dbt Project
 
 ```bash
 dbt init Sales_Analytics
@@ -67,13 +69,13 @@ Desired location option (enter a number): 1
 ---
 
 
-## Install dbt (BigQuery adapter)
+### Install dbt (BigQuery adapter)
 
 ```bash
 pip install dbt-bigquery
 ```
 
-## Check installation
+### Check installation
 
 ```bash
 dbt --version
@@ -101,11 +103,13 @@ sales_analytics:
 
 ```bash
 gcloud auth application-default login
-
+```
+---
 If U have this error:
 gcloud : The term 'gcloud' is not recognized as the name of a cmdlet, function, script file, or operable program.
 
- [*(Download SDK From:)*](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
+ 🔗 [*(Download SDK From:)*](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
+ 
 ---- hint during Auth U must check right in all checkboxes
 
 
@@ -128,8 +132,7 @@ search for C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
 4- Click OK → OK → OK.
 
 5- Restart VS Code again.
-
-```
+----
 
 ## 📦 Project Structure
 
