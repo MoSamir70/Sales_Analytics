@@ -69,22 +69,6 @@ pip install dbt-bigquery
 dbt --version
 ```
 
-###  Configure BigQuery Profile
-
-File: `~/.dbt/profiles.yml`
-
-```yaml
-sales_analytics:
-  target: dev
-  outputs:
-    dev:
-      type: bigquery
-      method: service-account
-      project: sales-analytics-476020
-      dataset: sales_database
-      keyfile: path/to/service_account.json
-      threads: 4
-```
 
 ## Connect dbt to BigQuery
 
@@ -93,26 +77,21 @@ sales_analytics:
 gcloud auth application-default login
 ```
 
+```bash
 
 If U have this error:
 
- 
 'gcloud' is not recognized as the name of a cmdlet or operable program. 🔗 [*(Download SDK From Here)*](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
- 
-
 hint during Auth U must check right in all checkboxes
 
 
-IF U Wonna permannet Solution for this error make SDK in your System  variables 
-
+-- IF U Wonna permannet Solution for this error make SDK in your System  variables 
 
 Firstly check in it exists 
 
- 
 search for C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
 
 $env:PATH -split ';'    # show all every path in one line 
-
 
 if not exists add it in is system  variables 
 
@@ -125,6 +104,7 @@ if not exists add it in is system  variables
 4- Click OK → OK → OK.
 
 5- Restart VS Code again.
+```
 
 ---
 
