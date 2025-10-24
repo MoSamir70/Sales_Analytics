@@ -183,7 +183,8 @@ Public docs:
 
 ---
 
-Refrence:
+
+Reference Blog:
 🔗 [*(DevBlogit)*](https://devblogit.com/mastering-dbt-core-a-step-by-step-installation-guide#6-snapshots-historical-tracking) 
 ---
 
