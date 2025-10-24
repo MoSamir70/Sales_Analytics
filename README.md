@@ -35,7 +35,7 @@ dbt-env\Scripts\activate   # Windows
 dbt init Sales_Analytics
 ```
 
-### dbt BigQuery Profile Configuration
+#### dbt BigQuery Profile Configuration
 
 ```bash
 Which database would you like to use? [1] bigquery
@@ -81,7 +81,9 @@ gcloud auth application-default login
 
 If U have this error:
 
-'gcloud' is not recognized as the name of a cmdlet or operable program. 🔗 [*(Download SDK From Here)*](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
+'gcloud' is not recognized as the name of a cmdlet or operable program.
+🔗 [*(Download SDK From Here)*](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
+
 hint during Auth U must check right in all checkboxes
 
 
