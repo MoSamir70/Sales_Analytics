@@ -179,11 +179,15 @@ dbt docs serve --port 8080
 ```
 
 Public docs:
+
 🔗 [*(GitHub Pages Deployment)*](https://mosamir70.github.io/Sales_Analytics/#!/overview)
+
+
 ---
 
 
 Reference Blog:
+
 🔗 [*(DevBlogit)*](https://devblogit.com/mastering-dbt-core-a-step-by-step-installation-guide#6-snapshots-historical-tracking)
 
 
