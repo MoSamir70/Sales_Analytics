@@ -3,7 +3,6 @@
 
 ---
 
-
 # Sales Analytics – dbt Project
 
 Step-by-Step Guide to End to end data engineering project (dbt + BigQuery, Github)
@@ -22,22 +21,12 @@ Step-by-Step Guide to End to end data engineering project (dbt + BigQuery, Githu
 ---
 
 
-## 🔧 Setup Instructions
-
-
-
 ### Create Virtual Environment
 
 ```bash
 python -m venv dbt-env
 dbt-env\Scripts\activate   # Windows
 ```
-
-
-### Create a BigQuery Dataset
-
-
-🔗 [*(Google Big query Consol:)*](https://console.cloud.google.com/bigquery?project=temporal-parser-476019-m6&ws=!1m0)
 
 
 ###  Initialize a dbt Project
@@ -114,10 +103,10 @@ IF U Wonna permannet Solution for this error make SDK in your System  variables
 
 -- Firstly check in it exists 
 
-$env:PATH -split ';' # show all every path in one line 
-search for C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
+$env:PATH -split ';'    # show all every path in one line 
+** search for C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
 
--- if not exists add it in is system  variables 
+** if not exists add it in is system  variables 
 
 1- Windows Search → “Environment Variables” → Open.
 
@@ -131,18 +120,11 @@ search for C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
 
 ---
 
-## 📦 Project Structure
+### Create a BigQuery Dataset
 
-```
-Sales_Analytics/
-  models/
-    staging/
-      stg_sales.sql
-      sales_final.sql
-  macros/
-    dynamic_partition.sql
-  dbt_project.yml
-```
+
+🔗 [*(Google Big query Consol)*](https://console.cloud.google.com/bigquery?project=temporal-parser-476019-m6&ws=!1m0)
+
 
 ## ✅ Common dbt CLI Commands
 
@@ -156,6 +138,8 @@ Sales_Analytics/
 | `dbt docs serve`    | preview docs locally     |
 | `dbt compile`       | only compile SQL         |
 | `dbt deps`          | install packages         |
+
+
 
 ---
 ## ❌ Mistakes I Made & ✅ How I Fixed Them
@@ -172,6 +156,19 @@ Sales_Analytics/
 ✅ All fixed successfully ✔
 
 ---
+
+## 📦 Project Structure
+
+```
+Sales_Analytics/
+  models/
+    staging/
+      stg_sales.sql
+      sales_final.sql
+  macros/
+    dynamic_partition.sql
+  dbt_project.yml
+```
 
 ## 🧪 Tests Included
 
@@ -192,6 +189,7 @@ dbt docs serve --port 8080
 
 Public docs:
 🔗 [*(GitHub Pages Deployment)*](https://mosamir70.github.io/Sales_Analytics/#!/overview)
+
 
 ---
 
