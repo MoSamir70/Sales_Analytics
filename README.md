@@ -6,44 +6,77 @@
 
 # Sales Analytics – dbt Project
 
-A real-world **Sales Analytics** pipeline built using `dbt` + BigQuery.
+Step-by-Step Guide to End to end data engineering project (dbt + BigQuery, Github)
 
-This project cleans and transforms raw sales data into **trusted business insights**, while also serving as a learning environment to practice dbt:
-
-✅ Staging models  
-✅ Final analytics models  
-✅ Sources + Schema tests  
-✅ Documentation + GitHub Pages hosting  
-✅ CI-ready project structure
-
----
-
-<img width="1847" height="967" alt="image" src="https://github.com/user-attachments/assets/85951bab-ed9d-4d93-8fec-cfbed302f0ec" />
-
+1. Set up Google Cloud Platform (GCP) and BigQuery
+2. Create a BigQuery Dataset with  (1M+ rows) in BigQuery
+3. Install and Configure dbt for BigQuery
+4. Initialize a dbt Project
+5. Connect dbt to BigQuery
+6. Write dbt Models (SQL Transformations)
+7. Run dbt Pipeline in BigQuery
+8. Test and Document Your dbt Project
+9. Push to github
+10. Make a public doumention
 
 
-## 🔧 Setup Instructions
 
-### 1️⃣ Create Virtual Environment
+#### 🔧 Setup Instructions
+
+
+
+## Create Virtual Environment
 
 ```bash
 python -m venv dbt-env
 dbt-env\Scripts\activate   # Windows
 ```
 
-### 2️⃣ Install dbt (BigQuery adapter)
+
+## Create a BigQuery Dataset
+
+```bash
+Google Big query Consol: https://console.cloud.google.com/bigquery?project=temporal-parser-476019-m6&ws=!1m0
+```
+
+##  Initialize a dbt Project
+
+```bash
+dbt init Sales_Analytics
+```
+
+Which database would you like to use?
+[1] bigquery
+
+Enter a number: 1
+[1] oauth
+[2] service_account
+Desired authentication method option (enter a number): 1
+project (GCP project id): sales-analytics-476020
+dataset (the name of your dbt dataset): sales_database
+threads (1 or more): 4
+job_execution_timeout_seconds [300]: 300
+[1] US
+[2] EU
+Desired location option (enter a number): 1
+
+
+---
+
+
+## Install dbt (BigQuery adapter)
 
 ```bash
 pip install dbt-bigquery
 ```
 
-### 3️⃣ Check installation
+## Check installation
 
 ```bash
 dbt --version
 ```
 
-### 4️⃣ Configure BigQuery Profile
+###  Configure BigQuery Profile
 
 File: `~/.dbt/profiles.yml`
 
@@ -60,6 +93,39 @@ sales_analytics:
       threads: 4
 ```
 
+## Connect dbt to BigQuery
+
+
+```bash
+gcloud auth application-default login
+
+If U have this error:
+gcloud : The term 'gcloud' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is 
+correct and try again.
+
+Download SDK From: https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe
+---- hint during Auth U must check right in all checkboxes
+```
+
+
+IF U Wonna permanet Solution for this error make SDK in System  variables 
+
+-- Firstly check in it exists 
+
+$env:PATH -split ';' ===>> search for C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
+
+-- if not exists add it  in is system  variables 
+
+1- Windows Search → “Environment Variables” → Open.
+
+2- Under System variables, select any Path → Edit.
+
+3- Click New, and add: C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
+
+4- Click OK → OK → OK.
+
+5- Restart VS Code again.
+
 ---
 
 ## 📦 Project Structure
@@ -74,8 +140,6 @@ Sales_Analytics/
     dynamic_partition.sql
   dbt_project.yml
 ```
-
----
 
 ## ✅ Common dbt CLI Commands
 
