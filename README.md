@@ -43,7 +43,7 @@ Google Big query Consol: https://console.cloud.google.com/bigquery?project=tempo
 
 ```bash
 dbt init Sales_Analytics
-```
+
 
 Which database would you like to use?
 [1] bigquery
@@ -59,6 +59,9 @@ job_execution_timeout_seconds [300]: 300
 [1] US
 [2] EU
 Desired location option (enter a number): 1
+
+```
+
 
 
 ---
@@ -100,21 +103,21 @@ sales_analytics:
 gcloud auth application-default login
 
 If U have this error:
-gcloud : The term 'gcloud' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is 
-correct and try again.
+gcloud : The term 'gcloud' is not recognized as the name of a cmdlet, function, script file, or operable program.
 
-Download SDK From: https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe
+ [*(Download SDK From:)*](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
 ---- hint during Auth U must check right in all checkboxes
-```
 
 
-IF U Wonna permanet Solution for this error make SDK in System  variables 
+
+IF U Wonna permannet Solution for this error make SDK in your System  variables 
 
 -- Firstly check in it exists 
 
-$env:PATH -split ';' ===>> search for C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
+$env:PATH -split ';' # show all every path in one line 
+search for C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
 
--- if not exists add it  in is system  variables 
+-- if not exists add it in is system  variables 
 
 1- Windows Search → “Environment Variables” → Open.
 
@@ -126,7 +129,7 @@ $env:PATH -split ';' ===>> search for C:\Program Files (x86)\Google\Cloud SDK\go
 
 5- Restart VS Code again.
 
----
+```
 
 ## 📦 Project Structure
 
@@ -158,13 +161,17 @@ Sales_Analytics/
 
 ## ❌ My Mistakes & ✅ How I Fixed Them
 
-| Issue                                    | What Happened                                     | Solution                                                               |
-| ---------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------- |
-| ✅ 1. Virtual env not activated           | `dbt not recognized` error                        | Use: `dbt-env\Scripts\activate` BEFORE running dbt                     |
-| ✅ 2. Wrong dbt path quoting              | Used `'project.dataset.table'` → SQL syntax error | Must use **backticks** in BigQuery: <br> `` `project.dataset.table` `` |
-| ✅ 3. Macro missing                       | `dynamic_partition` undefined                     | Removed unused macro / ensured correct syntax                          |
-| ✅ 4. Wrong reference to raw table        | Missing `source()`                                | Used: `from {{ source('sales_database', 'raw_sales') }}`               |
-| ✅ 5. Stale target folder caused failures | BigQuery still saw failed view                    | Fix: `dbt clean && dbt run`                                            |
+#	What Went Wrong	Error Example / Symptom	✅ How We Fixed It
+1️⃣	You tried using BigQuery without a credit card	Could not authenticate / sign in	Switched to Service Account authentication instead of Google account login
+2️⃣	gcloud command not working in PowerShell	gcloud : The term 'gcloud' is not recognized...	 Installed Google Cloud SDK and added to PATH
+3️⃣	Wrong project folder path	cd Sales_Analytics gave error ✅	Sales_Analytics not Sales Analytics ==> without space
+4 Wrong dbt path quoting  Used `'project.dataset.table'` → SQL syntax error  ✅ Must use **backticks** in BigQuery: <br> `` `project.dataset.table` `` |
+5	Wrong reference to raw tables	raw_sales not found in dataset	✅ Defined sources using:
+yaml<br>src(raw_database, raw_sales)<br>
+6	Caushing errors	Views 	✅ Used: dbt clean && dbt run
+7	Test version YAML indentation issues	Schema tests not recognized	✅ Used correct format:
+yaml<br>version: 2<br>models:<br> - name: ...
+
 
 ✅ All fixed successfully ✔
 
