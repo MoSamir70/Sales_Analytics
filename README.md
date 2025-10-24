@@ -1,4 +1,4 @@
-# ✅ Part 1 — README.md (complete & ready to upload)
+# ✅ README.md 
 
 
 ---
@@ -21,10 +21,11 @@ This project cleans and transforms raw sales data into **trusted business insigh
 ## 🔧 Setup Instructions
 
 ### 1️⃣ Create Virtual Environment
+
 ```bash
 python -m venv dbt-env
 dbt-env\Scripts\activate   # Windows
-````
+```
 
 ### 2️⃣ Install dbt (BigQuery adapter)
 
@@ -60,11 +61,14 @@ sales_analytics:
 ## 📦 Project Structure
 
 ```
-models/
-  staging/
-    stg_sales.sql
-  marts/
-    sales_final.sql
+Sales_Analytics/
+  models/
+    staging/
+      stg_sales.sql
+      sales_final.sql
+  macros/
+    dynamic_partition.sql
+  dbt_project.yml
 ```
 
 ---
