@@ -35,17 +35,16 @@ dbt-env\Scripts\activate   # Windows
 
 ### Create a BigQuery Dataset
 
-```bash
-
-🔗 [*(Google Big query Consol:)*](https://console.cloud.google.com/bigquery?project=temporal-parser-476019-m6&ws=!1m0)
-
 ```
+🔗 [*(Google Big query Consol:)*](https://console.cloud.google.com/bigquery?project=temporal-parser-476019-m6&ws=!1m0)
+```
+
 
 ###  Initialize a dbt Project
 
 ```bash
 dbt init Sales_Analytics
-
+```
 
 Which database would you like to use?
 [1] bigquery
@@ -62,11 +61,7 @@ job_execution_timeout_seconds [300]: 300
 [2] EU
 Desired location option (enter a number): 1
 
-```
 
-
-
----
 
 
 ### Install dbt (BigQuery adapter)
@@ -104,14 +99,14 @@ sales_analytics:
 ```bash
 gcloud auth application-default login
 ```
+
 ---
 If U have this error:
 gcloud : The term 'gcloud' is not recognized as the name of a cmdlet, function, script file, or operable program.
 
- 🔗 [*(Download SDK From:)*](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
+ 🔗 [*(Download SDK From Here)*](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
  
----- hint during Auth U must check right in all checkboxes
-
+*** hint during Auth U must check right in all checkboxes
 
 
 IF U Wonna permannet Solution for this error make SDK in your System  variables 
@@ -132,7 +127,8 @@ search for C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
 4- Click OK → OK → OK.
 
 5- Restart VS Code again.
-----
+
+---
 
 ## 📦 Project Structure
 
@@ -162,18 +158,13 @@ Sales_Analytics/
 
 ---
 
-## ❌ My Mistakes & ✅ How I Fixed Them
-
-#	What Went Wrong	Error Example / Symptom	✅ How We Fixed It
-1️⃣	You tried using BigQuery without a credit card	Could not authenticate / sign in	Switched to Service Account authentication instead of Google account login
-2️⃣	gcloud command not working in PowerShell	gcloud : The term 'gcloud' is not recognized...	 Installed Google Cloud SDK and added to PATH
-3️⃣	Wrong project folder path	cd Sales_Analytics gave error ✅	Sales_Analytics not Sales Analytics ==> without space
-4 Wrong dbt path quoting  Used `'project.dataset.table'` → SQL syntax error  ✅ Must use **backticks** in BigQuery: <br> `` `project.dataset.table` `` |
-5	Wrong reference to raw tables	raw_sales not found in dataset	✅ Defined sources using:
-yaml<br>src(raw_database, raw_sales)<br>
-6	Caushing errors	Views 	✅ Used: dbt clean && dbt run
-7	Test version YAML indentation issues	Schema tests not recognized	✅ Used correct format:
-yaml<br>version: 2<br>models:<br> - name: ...
+| #   | What Went Wrong                            | Error Example / Symptom                           | ✅ How It Was Fixed                                                               |
+| --- | ------------------------------------------ | ------------------------------------------------- | -------------------------------------------------------------------------------- |
+| 1️⃣ | Tried using BigQuery without a credit card | Could not authenticate / sign in                  | Switched to **Service Account authentication** instead of personal account login |
+| 2️⃣ | `gcloud` command not working in PowerShell | `gcloud : The term 'gcloud' is not recognized...` | Installed **Google Cloud SDK** and added it to **PATH**                          |
+| 3️⃣ | Wrong project folder name                  | `cd Sales_Analytics` gave error                   | Used correct folder name with **no spaces** → `Sales_Analytics` ✅                |
+| 4️⃣ | Wrong dbt quoting for BigQuery tables      | `'project.dataset.table'` → SQL syntax error      | Must use **backticks**:<br>`` `project.dataset.table` ``                         |
+| 5️⃣ | Caching issues causing view conflicts      | Outdated views produced errors                    | Ran: `dbt clean && dbt run` ✅                                                    |
 
 
 ✅ All fixed successfully ✔
