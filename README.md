@@ -90,7 +90,6 @@ sales_analytics:
 gcloud auth application-default login
 ```
 
----
 
 If U have this error:
 ** 'gcloud' is not recognized as the name of a cmdlet, function, script file, or operable program.
@@ -102,13 +101,17 @@ If U have this error:
 
 IF U Wonna permannet Solution for this error make SDK in your System  variables 
 
--- Firstly check in it exists 
 
-** search for C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
+Firstly check in it exists 
+
+ 
+search for C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
 
 $env:PATH -split ';'    # show all every path in one line 
 
-** if not exists add it in is system  variables 
+
+
+if not exists add it in is system  variables 
 
 1- Windows Search → “Environment Variables” → Open.
 
@@ -142,8 +145,8 @@ $env:PATH -split ';'    # show all every path in one line
 | `dbt deps`          | install packages         |
 
 
-
 ---
+
 ## ❌ Mistakes I Made & ✅ How I Fixed Them
 
 | #   | What Went Wrong                            | Error Example / Symptom                           | ✅ How It Was Fixed                                                               |
