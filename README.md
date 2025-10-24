@@ -19,6 +19,7 @@ Step-by-Step Guide to End to end data engineering project (dbt + BigQuery, Githu
 9. Push to github
 10. Make a public doumention
 
+---
 
 
 ## 🔧 Setup Instructions
@@ -35,9 +36,8 @@ dbt-env\Scripts\activate   # Windows
 
 ### Create a BigQuery Dataset
 
-```
+
 🔗 [*(Google Big query Consol:)*](https://console.cloud.google.com/bigquery?project=temporal-parser-476019-m6&ws=!1m0)
-```
 
 
 ###  Initialize a dbt Project
@@ -46,6 +46,7 @@ dbt-env\Scripts\activate   # Windows
 dbt init Sales_Analytics
 ```
 
+---
 Which database would you like to use?
 [1] bigquery
 
@@ -60,7 +61,7 @@ job_execution_timeout_seconds [300]: 300
 [1] US
 [2] EU
 Desired location option (enter a number): 1
-
+---
 
 
 
@@ -102,7 +103,7 @@ gcloud auth application-default login
 
 ---
 If U have this error:
-gcloud : The term 'gcloud' is not recognized as the name of a cmdlet, function, script file, or operable program.
+The term 'gcloud' is not recognized as the name of a cmdlet, function, script file, or operable program.
 
  🔗 [*(Download SDK From Here)*](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
  
@@ -157,6 +158,7 @@ Sales_Analytics/
 | `dbt deps`          | install packages         |
 
 ---
+## ❌ Mistakes I Made & ✅ How I Fixed Them
 
 | #   | What Went Wrong                            | Error Example / Symptom                           | ✅ How It Was Fixed                                                               |
 | --- | ------------------------------------------ | ------------------------------------------------- | -------------------------------------------------------------------------------- |
