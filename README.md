@@ -18,6 +18,9 @@ This project cleans and transforms raw sales data into **trusted business insigh
 
 ---
 
+<img width="1847" height="967" alt="image" src="https://github.com/user-attachments/assets/85951bab-ed9d-4d93-8fec-cfbed302f0ec" />
+
+
 
 ## 🔧 Setup Instructions
 
