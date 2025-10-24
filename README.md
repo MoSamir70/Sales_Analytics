@@ -3,7 +3,7 @@
 
 ---
 
-````markdown
+
 # Sales Analytics – dbt Project
 
 A real-world **Sales Analytics** pipeline built using `dbt` + BigQuery.
@@ -19,8 +19,6 @@ This project cleans and transforms raw sales data into **trusted business insigh
 ---
 
 
-````
-
 ## 🔧 Setup Instructions
 
 ### 1️⃣ Create Virtual Environment
@@ -28,6 +26,7 @@ This project cleans and transforms raw sales data into **trusted business insigh
 ```bash
 python -m venv dbt-env
 dbt-env\Scripts\activate   # Windows
+```
 
 ### 2️⃣ Install dbt (BigQuery adapter)
 
