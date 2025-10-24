@@ -35,7 +35,7 @@ dbt-env\Scripts\activate   # Windows
 dbt init Sales_Analytics
 ```
 
----
+-----
 Which database would you like to use?
 [1] bigquery
 
@@ -50,7 +50,7 @@ job_execution_timeout_seconds [300]: 300
 [1] US
 [2] EU
 Desired location option (enter a number): 1
----
+-----
 
 
 
@@ -91,8 +91,9 @@ gcloud auth application-default login
 ```
 
 ---
+
 If U have this error:
-The term 'gcloud' is not recognized as the name of a cmdlet, function, script file, or operable program.
+** 'gcloud' is not recognized as the name of a cmdlet, function, script file, or operable program.
 
  🔗 [*(Download SDK From Here)*](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
  
@@ -103,8 +104,9 @@ IF U Wonna permannet Solution for this error make SDK in your System  variables
 
 -- Firstly check in it exists 
 
-$env:PATH -split ';'    # show all every path in one line 
 ** search for C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin
+
+$env:PATH -split ';'    # show all every path in one line 
 
 ** if not exists add it in is system  variables 
 
