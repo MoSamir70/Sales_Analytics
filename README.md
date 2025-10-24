@@ -1,15 +1,5 @@
-Perfect — thanks! ✅
-I’ll generate everything requested based on:
-
-* **GitHub Username:** `MoSamir70`
-* **Purpose:** Sales Analytics + Learning dbt
-* **Docs Hosting:** GitHub Pages ✅
-
----
-
 # ✅ Part 1 — README.md (complete & ready to upload)
 
-You can copy-paste this directly into your **README.md** file inside your dbt project:
 
 ---
 
@@ -126,7 +116,7 @@ dbt docs serve
 ```
 
 GitHub Pages live docs:
-🔗 *(deployment steps below)*
+🔗 [*(deployment steps below)*](https://mosamir70.github.io/Sales_Analytics/#!/overview)
 
 ---
 
@@ -143,59 +133,3 @@ GitHub Pages live docs:
 **Muhammad Samir**
 GitHub: [@MoSamir70](https://github.com/MoSamir70)
 
----
-
-Happy Analytics! 📈🎯
-
-```
-
----
-
-✅ README.md ✅ **DONE**  
-Next step 👉 deploy docs to GitHub Pages
-
----
-
-# ✅ Part 2 — Deploy dbt Docs (GitHub Pages)
-
-We’ll create a branch named:
-
-> `gh-pages`
-
-And publish the `target/` docs output there.
-
-📌 Before I send commands — I need ONE more detail:
-
-Where is your Git repo?
-
-Choose one:
-
-A️⃣ Repo already exists on GitHub  
-✅ You already pushed the project (tell me repo name like: `Sales_Analytics`)
-
-B️⃣ Repo not created yet  
-✅ I will give you commands to create + push + deploy docs
-
----
-
-Reply with:
-
-```
-
-A or B
-Repo name (if A)
-
-```
-
-Example:
-```
-
-A
-Repo name: Sales_Analytics
-
-```
-
----
-
-Waiting for your answer, then I’ll finalize deployment ✅🚀
-```
